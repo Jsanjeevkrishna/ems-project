@@ -1,0 +1,184 @@
+/* ===== WRAPPER ===== */
+.attendance-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #071029, #0b1b3a);
+  padding: 60px 40px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== CARD ===== */
+.attendance-card {
+  width: 100%;
+  max-width: 1100px;
+  background: #0f1f45;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+/* ===== TITLE ===== */
+.attendance-title {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 40px;
+  color: #38bdf8;
+}
+
+/* ===== SUMMARY BOXES ===== */
+.attendance-summary {
+  display: flex;
+  gap: 20px;
+  justify-content: center;  /* center cards */
+  margin-bottom: 35px;
+}
+
+.summary-box {
+  width: 260px;      /* control width */
+  padding: 18px 15px;
+  border-radius: 25px;
+  text-align: center;
+  color: white;
+   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.summary-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+}
+
+
+.summary-box h3 {
+  margin-bottom: 10px;
+}
+
+.summary-box p {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.summary-box span {
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.present {
+  background: linear-gradient(135deg, #16a34a, #15803d);
+}
+
+.absent {
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+}
+
+/* ===== GRAPH ===== */
+.graph-section {
+  margin-bottom: 50px;
+}
+
+.graph-section h3 {
+  margin-bottom: 20px;
+  color: #60a5fa;
+}
+
+.bar-container {
+  background: #1e3a8a;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.bar {
+  height: 30px;
+  line-height: 30px;
+  padding-left: 10px;
+  color: white;
+  font-weight: bold;
+  transition: width 0.5s ease;
+}
+
+.present-bar {
+  background: #22c55e;
+}
+
+.absent-bar {
+  background: #ef4444;
+}
+
+/* ===== TABLE ===== */
+.attendance-table-wrapper h3 {
+  margin-bottom: 20px;
+  color: #60a5fa;
+}
+
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #e2e8f0;
+}
+
+.attendance-table thead {
+  background: #1e3a8a;
+}
+
+.attendance-table th,
+.attendance-table td {
+  padding: 14px;
+  text-align: left;
+}
+
+.attendance-table tr {
+  border-bottom: 1px solid #1e3a8a;
+}
+
+.attendance-table tr:hover {
+  background: rgba(56, 189, 248, 0.08);
+}
+
+/* Status Colors */
+.status-present {
+  color: #22c55e;
+  font-weight: bold;
+}
+
+.status-absent {
+  color: #ef4444;
+  font-weight: bold;
+}
+/* ===== CIRCLE GRAPH ===== */
+
+.circle-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.circle {
+  width: 130px;        /* reduced from 180px */
+  height: 130px;       /* reduced from 180px */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-inner {
+  width: 90px;         /* reduced from 130px */
+  height: 90px;        /* reduced from 130px */
+  background: #0f1f45;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-inner span {
+  font-size: 20px;     /* reduced text */
+  font-weight: bold;
+}
+
+.circle-inner small {
+  font-size: 12px;
+  opacity: 0.7;
+}

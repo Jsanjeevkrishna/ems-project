@@ -1,0 +1,101 @@
+/* ===== WRAPPER ===== */
+.search-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #071029, #0b1b3a);
+  padding: 60px 40px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== CARD ===== */
+.search-card {
+  width: 100%;
+  max-width: 1000px;
+  background: #0f1f45;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+/* ===== TITLE ===== */
+.search-title {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #38bdf8;
+}
+
+/* ===== FILTERS ===== */
+.search-filters {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.search-filters input,
+.search-filters select {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: #1e3a8a;
+  color: white;
+  font-size: 14px;
+}
+
+.search-filters input {
+  flex: 1;
+}
+
+.search-filters input::placeholder {
+  color: #cbd5e1;
+}
+
+/* ===== TABLE ===== */
+.search-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #e2e8f0;
+}
+
+.search-table thead {
+  background: #1e3a8a;
+}
+
+.search-table th,
+.search-table td {
+  padding: 14px;
+  text-align: left;
+}
+
+.search-table tr {
+  border-bottom: 1px solid #1e3a8a;
+}
+
+.search-table tr:hover {
+  background: rgba(56, 189, 248, 0.08);
+}
+
+/* ===== ROLE BADGE ===== */
+.role-badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.role-badge.employee {
+  background: #2563eb;
+  color: white;
+}
+
+.role-badge.manager {
+  background: #16a34a;
+  color: white;
+}
+
+/* ===== NO DATA ===== */
+.no-data {
+  text-align: center;
+  padding: 20px;
+  color: #94a3b8;
+}

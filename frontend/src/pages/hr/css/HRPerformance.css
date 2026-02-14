@@ -1,0 +1,133 @@
+/* ===== WRAPPER ===== */
+.performance-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #071029, #0b1b3a);
+  padding: 60px 40px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== CARD ===== */
+.performance-card {
+  width: 100%;
+  max-width: 1100px;
+  background: #0f1f45;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+/* ===== TITLE ===== */
+.performance-title {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 40px;
+  color: #38bdf8;
+}
+
+/* ===== MAIN TABLE ===== */
+.performance-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #e2e8f0;
+}
+
+.performance-table thead {
+  background: #1e3a8a;
+}
+
+.performance-table th,
+.performance-table td {
+  padding: 14px;
+  text-align: left;
+}
+
+.performance-table tr {
+  border-bottom: 1px solid #1e3a8a;
+}
+
+.performance-table tr:hover {
+  background: rgba(56, 189, 248, 0.08);
+}
+
+/* ===== PROGRESS BAR ===== */
+.progress-container {
+  background: #1e3a8a;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 28px;
+}
+
+.progress-container.small {
+  height: 22px;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+  text-align: center;
+  line-height: 28px;
+  font-weight: bold;
+  color: white;
+  transition: width 0.4s ease;
+}
+
+.progress-container.small .progress-bar {
+  line-height: 22px;
+  font-size: 12px;
+}
+
+/* ===== TEAM BUTTON ===== */
+.team-btn {
+  background: #38bdf8;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.team-btn:hover {
+  background: #0ea5e9;
+}
+
+/* ===== TEAM SECTION ===== */
+.team-section {
+  background: #112554;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+.team-section h4 {
+  margin-bottom: 15px;
+  color: #60a5fa;
+}
+
+/* ===== TEAM TABLE ===== */
+.team-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #cbd5e1;
+}
+
+.team-table thead {
+  background: #1e3a8a;
+}
+
+.team-table th,
+.team-table td {
+  padding: 10px;
+}
+
+.team-table tr {
+  border-bottom: 1px solid #1e3a8a;
+}
+
+/* ===== NO DATA ===== */
+.no-data {
+  text-align: center;
+  padding: 20px;
+  color: #94a3b8;
+}

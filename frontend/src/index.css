@@ -1,0 +1,50 @@
+/* ===== GLOBAL RESET ===== */
+* {
+  box-sizing: border-box;
+}
+
+/* ===== ROOT & VIEWPORT ===== */
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== BASE BODY STYLES ===== */
+body {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  background-color: #f4f4f5;   /* light gray */
+  color: #111;                /* dark text */
+
+  margin: 0;
+  display: block;
+}
+
+/* ===== LINKS ===== */
+a {
+  font-weight: 500;
+  color: #4facfe;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #7bbcff;
+}
+
+/* ===== BUTTON BASE ===== */
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* ===== REMOVE FOCUS OUTLINE GLOW ===== */
+button:focus-visible {
+  outline: 2px solid #8cfe4f;
+  outline-offset: 2px;
+}

@@ -1,0 +1,59 @@
+.manager-attendance-wrapper {
+  padding: 40px 60px;
+  color: #e2e8f0;
+}
+
+.manager-attendance-title {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #38bdf8;
+}
+
+.manager-team-count {
+  margin-bottom: 25px;
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+/* ===== TABLE CARD ===== */
+.manager-table-card {
+  background: #162447;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== TABLE ===== */
+.manager-attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.manager-attendance-table thead {
+  background: #1e3a8a;
+}
+
+.manager-attendance-table th,
+.manager-attendance-table td {
+  padding: 14px;
+  text-align: left;
+}
+
+.manager-attendance-table tr {
+  border-bottom: 1px solid #1e293b;
+}
+
+.manager-attendance-table tr:hover {
+  background: rgba(56, 189, 248, 0.05);
+}
+
+/* ===== STATUS COLORS ===== */
+.status-present {
+  color: #22c55e;
+  font-weight: bold;
+}
+
+.status-absent {
+  color: #ef4444;
+  font-weight: bold;
+}

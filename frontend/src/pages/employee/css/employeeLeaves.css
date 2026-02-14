@@ -1,0 +1,90 @@
+.leaves-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* ===== FORM CARD ===== */
+.leave-form-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 18px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.leave-form-card h2 {
+  margin-bottom: 20px;
+}
+
+.leave-form {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.leave-form input {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+/* Button */
+.apply-btn {
+  background: #2563eb;
+  padding: 10px 22px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.apply-btn:hover {
+  background: #1e40af;
+}
+
+/* Message */
+.leave-message {
+  margin-top: 15px;
+  color: #38bdf8;
+}
+
+/* ===== LEAVE LIST ===== */
+.leave-list h2 {
+  margin-bottom: 20px;
+}
+
+.leave-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px 25px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.leave-reason {
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+/* Status colors */
+.status-approved {
+  color: #22c55e;
+  font-weight: bold;
+}
+
+.status-rejected {
+  color: #ef4444;
+  font-weight: bold;
+}
+
+.status-pending {
+  color: #facc15;
+  font-weight: bold;
+}

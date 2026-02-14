@@ -1,0 +1,50 @@
+/* Full screen center */
+.role-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #27272a;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+/* Card */
+.role-card {
+  background: #f4f4f5;
+  padding: 40px;
+  width: 320px;
+  border-radius: 16px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7);
+  text-align: center;
+}
+
+/* Heading */
+.role-title {
+  color: #000000d6;
+  margin-bottom: 28px;
+  font-size: 24px;
+  letter-spacing: 0.5px;
+}
+
+/* Buttons */
+.role-btn {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 16px;
+  border: none;
+  border-radius: 10px;
+  background: #ffa500b5;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.role-btn:hover {
+  background: #4facfe50;
+  transform: translateY(-2px);
+}
+
+.role-btn:active {
+  transform: scale(0.97);
+}

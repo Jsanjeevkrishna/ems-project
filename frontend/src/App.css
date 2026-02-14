@@ -1,0 +1,25 @@
+/* ===== GLOBAL RESET ===== */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove Vite demo layout */
+#root {
+  max-width: none;
+  text-align: left;
+}
+
+/* Optional global font */
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background-color: #111;
+}

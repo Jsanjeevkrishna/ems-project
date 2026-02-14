@@ -1,0 +1,106 @@
+/* ===== WRAPPER ===== */
+.manager-leaves-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #071029, #0b1b3a);
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== CARD ===== */
+.manager-leaves-card {
+  width: 100%;
+  max-width: 1200px;
+  background: #0f1f45;
+  padding: 30px 40px;
+  border-radius: 18px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+/* ===== TITLE ===== */
+.manager-leaves-title {
+  font-size: 26px;
+  margin-bottom: 30px;
+  color: #38bdf8;
+}
+
+/* ===== TABLE ===== */
+.manager-leaves-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #e2e8f0;
+}
+
+.manager-leaves-table thead {
+  background: #1e3a8a;
+}
+
+.manager-leaves-table th,
+.manager-leaves-table td {
+  padding: 14px;
+  text-align: left;
+}
+
+.manager-leaves-table th {
+  font-weight: 600;
+}
+
+.manager-leaves-table tr {
+  border-bottom: 1px solid #1e3a8a;
+}
+
+.manager-leaves-table tr:hover {
+  background: rgba(56, 189, 248, 0.08);
+}
+
+/* ===== STATUS COLORS ===== */
+.status-pending {
+  color: #facc15;
+  font-weight: 600;
+}
+
+.status-approved {
+  color: #22c55e;
+  font-weight: 600;
+}
+
+.status-forwarded {
+  color: #60a5fa;
+  font-weight: 600;
+}
+
+/* ===== BUTTONS ===== */
+.action-btn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 6px;
+  transition: 0.3s;
+}
+
+.approve-btn {
+  background: #22c55e;
+  color: white;
+}
+
+.approve-btn:hover {
+  background: #16a34a;
+}
+
+.forward-btn {
+  background: #3b82f6;
+  color: white;
+}
+
+.forward-btn:hover {
+  background: #2563eb;
+}
+
+/* ===== EMPTY STATE ===== */
+.no-data {
+  text-align: center;
+  padding: 20px;
+  color: #94a3b8;
+}

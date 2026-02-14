@@ -1,0 +1,96 @@
+/* ===== WRAPPER ===== */
+.manager-performance-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #071029, #0b1b3a);
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== CARD ===== */
+.manager-performance-card {
+  width: 100%;
+  max-width: 1200px;
+  background: #0f1f45;
+  padding: 30px 40px;
+  border-radius: 18px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+/* ===== TITLE ===== */
+.manager-performance-title {
+  font-size: 26px;
+  margin-bottom: 30px;
+  color: #38bdf8;
+}
+
+/* ===== TABLE ===== */
+.manager-performance-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #e2e8f0;
+  margin-bottom: 30px;
+}
+
+.manager-performance-table thead {
+  background: #1e3a8a;
+}
+
+.manager-performance-table th,
+.manager-performance-table td {
+  padding: 14px;
+  text-align: left;
+}
+
+.manager-performance-table tr {
+  border-bottom: 1px solid #1e3a8a;
+}
+
+.manager-performance-table tr:hover {
+  background: rgba(56, 189, 248, 0.08);
+}
+
+/* ===== BUTTON ===== */
+.details-btn {
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.details-btn:hover {
+  background: #2563eb;
+}
+
+/* ===== COMPLETION COLORS ===== */
+.completion-high {
+  color: #22c55e;
+  font-weight: 600;
+}
+
+.completion-low {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+/* ===== INDIVIDUAL CARD ===== */
+.individual-card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  color: #e2e8f0;
+}
+
+.individual-card h3 {
+  color: #38bdf8;
+  margin-bottom: 15px;
+}
+
+.individual-card p {
+  margin-bottom: 8px;
+}
