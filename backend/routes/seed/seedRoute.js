@@ -34,9 +34,9 @@ router.post("/", async (req, res) => {
 
     // Create tasks
     await Task.create([
-      { title: "Design database schema", description: "Model User, Project, Task relationships", status: "completed", priority: "high", projectId: project._id, assignedTo: employee._id, dueDate: new Date(Date.now() - 5 * 86400000) },
-      { title: "Build REST API", description: "Auth, Projects, Tasks endpoints", status: "in-progress", priority: "high", projectId: project._id, assignedTo: manager._id, dueDate: new Date(Date.now() + 7 * 86400000) },
-      { title: "Deploy to production", description: "Railway/Render deployment with env vars", status: "pending", priority: "medium", projectId: project._id, assignedTo: employee._id, dueDate: new Date(Date.now() + 14 * 86400000) },
+      { title: "Design database schema", description: "Model User, Project, Task relationships", status: "completed", priority: "high", projectId: project._id, employeeId: employee._id, managerId: manager._id, dueDate: new Date(Date.now() - 5 * 86400000) },
+      { title: "Build REST API", description: "Auth, Projects, Tasks endpoints", status: "in-progress", priority: "high", projectId: project._id, employeeId: employee._id, managerId: manager._id, dueDate: new Date(Date.now() + 7 * 86400000) },
+      { title: "Deploy to production", description: "Render deployment with env vars", status: "pending", priority: "medium", projectId: project._id, employeeId: employee._id, managerId: manager._id, dueDate: new Date(Date.now() + 14 * 86400000) },
     ]);
 
     res.json({ message: "✅ Demo data seeded!", users: ["admin@taskflow.com", "manager@taskflow.com", "employee@taskflow.com"], project: project.title });
