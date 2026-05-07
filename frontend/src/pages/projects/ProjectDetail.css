@@ -1,0 +1,330 @@
+/* ============================================================
+   Project Detail styles — extends Projects.css globals
+============================================================ */
+
+.pd-page {
+  font-family: "Inter", sans-serif;
+  padding: 32px;
+  max-width: 1200px;
+  color: #e2e8f0;
+}
+
+/* Back link */
+.pd-back {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #94a3b8;
+  border-radius: 8px;
+  padding: 7px 14px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-family: inherit;
+  margin-bottom: 24px;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.pd-back:hover { border-color: #a78bfa; color: #a78bfa; }
+
+/* Header */
+.pd-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.pd-badges { display: flex; gap: 10px; align-items: center; margin-bottom: 10px; }
+
+.pd-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin: 0 0 8px;
+}
+
+.pd-desc {
+  color: #64748b;
+  font-size: 0.92rem;
+  margin: 0 0 14px;
+  line-height: 1.6;
+}
+
+.pd-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.82rem;
+  color: #64748b;
+}
+
+.pd-header-actions { display: flex; gap: 10px; align-items: flex-start; padding-top: 4px; }
+
+.pd-btn-danger {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #fca5a5;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-family: inherit;
+  transition: background 0.2s;
+}
+
+.pd-btn-danger:hover { background: rgba(239, 68, 68, 0.25); }
+
+/* Progress card */
+.pd-progress-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin-bottom: 32px;
+}
+
+.pd-progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+.pd-progress-pct { font-weight: 700; color: #a78bfa; font-size: 1.1rem; }
+
+.pd-progress-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 99px;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+
+.pd-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #7c3aed, #4f46e5);
+  border-radius: 99px;
+  transition: width 0.5s ease;
+}
+
+.pd-task-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+/* Body layout */
+.pd-body {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 860px) {
+  .pd-body { grid-template-columns: 1fr; }
+}
+
+/* Section header */
+.pd-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.pd-section-header h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #f1f5f9;
+  margin: 0;
+}
+
+.pd-btn-add {
+  background: rgba(124, 58, 237, 0.2);
+  border: 1px solid rgba(124, 58, 237, 0.4);
+  color: #c4b5fd;
+  border-radius: 8px;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-family: inherit;
+  transition: background 0.2s;
+}
+
+.pd-btn-add:hover { background: rgba(124, 58, 237, 0.3); }
+
+/* Forms */
+.pd-form {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 18px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pd-input {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: #e2e8f0;
+  font-size: 0.88rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.pd-input:focus { border-color: rgba(167, 139, 250, 0.5); }
+.pd-input option { background: #1e1b4b; }
+
+.pd-textarea { min-height: 72px; resize: vertical; }
+
+.pd-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+.pd-error {
+  color: #fca5a5;
+  font-size: 0.82rem;
+  margin: 0;
+  background: rgba(239,68,68,0.1);
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.pd-btn-submit {
+  background: linear-gradient(135deg, #7c3aed, #4f46e5);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: opacity 0.2s;
+}
+
+.pd-btn-submit:hover { opacity: 0.9; }
+
+/* Task list */
+.pd-task-list { display: flex; flex-direction: column; gap: 12px; }
+
+.pd-task-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 16px;
+  transition: border-color 0.2s;
+}
+
+.pd-task-card:hover { border-color: rgba(167, 139, 250, 0.3); }
+.pd-task-card.overdue { border-color: rgba(239, 68, 68, 0.3); }
+
+.pd-task-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.pd-task-status {
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.pd-task-priority { font-size: 0.72rem; text-transform: capitalize; font-weight: 500; }
+
+.pd-task-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #f1f5f9;
+  margin: 0 0 4px;
+}
+
+.pd-task-desc {
+  font-size: 0.82rem;
+  color: #64748b;
+  margin: 0 0 10px;
+  line-height: 1.4;
+}
+
+.pd-task-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.78rem;
+  color: #64748b;
+  margin-bottom: 10px;
+}
+
+.pd-task-actions { margin-top: 10px; }
+
+.pd-status-select {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  padding: 6px 10px;
+  color: #e2e8f0;
+  font-size: 0.8rem;
+  font-family: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+.pd-status-select option { background: #1e1b4b; }
+
+/* Empty state */
+.pd-empty { color: #475569; font-size: 0.88rem; padding: 20px 0; text-align: center; }
+
+/* Members column */
+.pd-members-col {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.pd-member-list { display: flex; flex-direction: column; gap: 10px; }
+
+.pd-member-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  transition: background 0.2s;
+}
+
+.pd-member-item:hover { background: rgba(255, 255, 255, 0.04); }
+
+.pd-member-info { flex: 1; display: flex; flex-direction: column; }
+
+.pd-member-name { font-size: 0.88rem; font-weight: 500; color: #e2e8f0; }
+.pd-member-role { font-size: 0.75rem; color: #64748b; text-transform: capitalize; }
+
+.pd-member-remove {
+  background: transparent;
+  border: none;
+  color: #475569;
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 4px 6px;
+  border-radius: 4px;
+  transition: color 0.2s, background 0.2s;
+}
+
+.pd-member-remove:hover { color: #fca5a5; background: rgba(239,68,68,0.1); }

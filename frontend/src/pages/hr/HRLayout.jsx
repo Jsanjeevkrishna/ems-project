@@ -39,13 +39,14 @@ function HRLayout() {
        <h2 className="hr-title">HR Panel</h2>
 
 
-        <button style={btnStyle("/hr/dashboard")} onClick={() => navigate("/hr/dashboard")}>Dashboard</button>
-        <button style={btnStyle("/hr/users")} onClick={() => navigate("/hr/users")}>Manage Users</button>
-        <button style={btnStyle("/hr/attendance")} onClick={() => navigate("/hr/attendance")}>Attendance</button>
-        <button style={btnStyle("/hr/leaves")} onClick={() => navigate("/hr/leaves")}>Leaves</button>
-        <button style={btnStyle("/hr/payroll")} onClick={() => navigate("/hr/payroll")}>Payroll</button>
-        <button style={btnStyle("/hr/performance")} onClick={() => navigate("/hr/performance")}>Performance</button>
-        <button style={btnStyle("/hr/search")} onClick={() => navigate("/hr/search")}>Search</button>
+        <button style={btnStyle("/hr/dashboard")} onClick={() => navigate("/hr/dashboard")}>🏠 Dashboard</button>
+        <button style={btnStyle("/hr/users")} onClick={() => navigate("/hr/users")}>👥 Manage Users</button>
+        <button style={btnStyle("/hr/projects")} onClick={() => navigate("/hr/projects")}>📁 Projects</button>
+        <button style={btnStyle("/hr/attendance")} onClick={() => navigate("/hr/attendance")}>📋 Attendance</button>
+        <button style={btnStyle("/hr/leaves")} onClick={() => navigate("/hr/leaves")}>🏖 Leaves</button>
+        <button style={btnStyle("/hr/payroll")} onClick={() => navigate("/hr/payroll")}>💰 Payroll</button>
+        <button style={btnStyle("/hr/performance")} onClick={() => navigate("/hr/performance")}>📊 Performance</button>
+        <button style={btnStyle("/hr/search")} onClick={() => navigate("/hr/search")}>🔍 Search</button>
 
         <hr style={{ margin: "25px 0", borderColor: "#1e293b" }} />
 

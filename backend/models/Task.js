@@ -5,14 +5,25 @@ const taskSchema = new mongoose.Schema(
     title: {
       type: String,
       required: true,
+      trim: true,
     },
 
-    description: {
+    description: { type: String, default: "" },
+
+    dueDate: { type: Date },
+
+    priority: {
       type: String,
+      enum: ["low", "medium", "high"],
+      default: "medium",
     },
-    dueDate: {
-  type: Date,
-},
+
+    /** Optional link to a project */
+    projectId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Project",
+      default: null,
+    },
 
     employeeId: {
       type: mongoose.Schema.Types.ObjectId,

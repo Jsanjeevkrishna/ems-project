@@ -40,10 +40,11 @@ export default function ManagerLayout() {
         {/* CENTER NAVIGATION */}
         <div className="nav-links">
           <NavLink to="dashboard" style={linkStyle}>Dashboard</NavLink>
+          <NavLink to="projects" style={linkStyle}>📁 Projects</NavLink>
+          <NavLink to="tasks" style={linkStyle}>Tasks</NavLink>
           <NavLink to="attendance" style={linkStyle}>Attendance</NavLink>
           <NavLink to="leaves" style={linkStyle}>Leaves</NavLink>
           <NavLink to="performance" style={linkStyle}>Performance</NavLink>
-          <NavLink to="tasks" style={linkStyle}>Tasks</NavLink>
           <NavLink to="team-chat" style={linkStyle}>Team Chat</NavLink>
         </div>
 

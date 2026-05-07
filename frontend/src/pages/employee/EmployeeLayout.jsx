@@ -3,18 +3,12 @@ import "./css/employeeLayout.css";
 
 export default function EmployeeLayout() {
   const navigate = useNavigate();
-  const user = JSON.parse(localStorage.getItem("user"));
+  const name = localStorage.getItem("name") || "Employee";
 
   const handleLogout = () => {
     localStorage.clear();
     navigate("/", { replace: true });
   };
-
-  const goToProfile = () => {
-    navigate("/employee/profile");
-  };
-
-  const firstLetter = user?.name?.charAt(0).toUpperCase();
 
   return (
     <div className="employee-page">
@@ -24,27 +18,28 @@ export default function EmployeeLayout() {
 
         {/* Left */}
         <div className="header-left">
-          <p className="welcome-text">Welcome, {user?.name} 👋</p>
+          <p className="welcome-text">Welcome, {name} 👋</p>
           <h1>Employee Panel</h1>
         </div>
 
         {/* Center Navigation */}
         <nav className="header-nav">
           <NavLink to="dashboard" className="nav-btn">Dashboard</NavLink>
+          <NavLink to="projects" className="nav-btn">📁 Projects</NavLink>
+          <NavLink to="tasks" className="nav-btn">Tasks</NavLink>
           <NavLink to="attendance" className="nav-btn">Attendance</NavLink>
           <NavLink to="leaves" className="nav-btn">Leaves</NavLink>
-          <NavLink to="tasks" className="nav-btn">Tasks</NavLink>
           <NavLink to="chat" className="nav-btn">Team Chat</NavLink>
         </nav>
 
         {/* Right */}
         <div className="header-right">
-          <div 
+          <div
             className="profile-circle"
-            onClick={goToProfile}
+            onClick={() => navigate("/employee/profile")}
             style={{ cursor: "pointer" }}
           >
-            {firstLetter}
+            {name.charAt(0).toUpperCase()}
           </div>
 
           <button className="logout-btn" onClick={handleLogout}>
@@ -62,3 +57,4 @@ export default function EmployeeLayout() {
     </div>
   );
 }
+

@@ -1,9 +1,44 @@
 const User = require("../../models/User");
 const jwt = require("jsonwebtoken");
 
-/**
- * Login
- */
+/* ────────────────────────────────────────────
+   SIGNUP  (self-registration as member/employee)
+──────────────────────────────────────────── */
+exports.signup = async (req, res) => {
+  try {
+    const { name, email, password } = req.body;
+
+    if (!name || !email || !password)
+      return res.status(400).json({ message: "name, email and password are required" });
+
+    const existing = await User.findOne({ email });
+    if (existing) return res.status(409).json({ message: "Email already registered" });
+
+    const user = await User.create({
+      name,
+      email,
+      password,
+      role: "employee",
+      isFirstLogin: false,
+    });
+
+    const token = jwt.sign({ id: user._id, role: user.role }, process.env.JWT_SECRET, {
+      expiresIn: "1d",
+    });
+
+    res.status(201).json({
+      message: "Account created",
+      token,
+      user: { id: user._id, name: user.name, role: user.role },
+    });
+  } catch (err) {
+    res.status(500).json({ message: "Server error", error: err.message });
+  }
+};
+
+/* ────────────────────────────────────────────
+   LOGIN
+──────────────────────────────────────────── */
 exports.login = async (req, res) => {
   try {
     const { email, password, role } = req.body;
@@ -14,20 +49,19 @@ exports.login = async (req, res) => {
       return res.status(401).json({ message: "Invalid credentials" });
     }
 
-    if (user.role !== role) {
+    if (role && user.role !== role) {
       return res.status(403).json({ message: "Unauthorized role" });
     }
 
     // FIRST LOGIN CHECK
-   if (user.isFirstLogin) {
-  return res.status(200).json({
-    firstLogin: true,
-    userId: user._id,
-    role: user.role,
-    message: "Please set your password",
-  });
-}
-
+    if (user.isFirstLogin) {
+      return res.status(200).json({
+        firstLogin: true,
+        userId: user._id,
+        role: user.role,
+        message: "Please set your password",
+      });
+    }
 
     const isMatch = await user.matchPassword(password);
 
@@ -50,16 +84,15 @@ exports.login = async (req, res) => {
         role: user.role,
       },
     });
-
   } catch (error) {
     res.status(500).json({ message: "Server error" });
   }
 };
 
 
-/**
- * Set Password (First Login)
- */
+/* ────────────────────────────────────────────
+   SET PASSWORD  (First Login)
+──────────────────────────────────────────── */
 exports.setPassword = async (req, res) => {
   try {
     const { userId, password } = req.body;
@@ -80,8 +113,8 @@ exports.setPassword = async (req, res) => {
     await user.save();
 
     res.json({ message: "Password set successfully. Please login again." });
-
   } catch (error) {
     res.status(500).json({ message: "Server error" });
   }
 };
+
