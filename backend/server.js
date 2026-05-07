@@ -72,6 +72,9 @@ app.use("/api/notifications", require("./routes/common/notificationRoutes"));
 /* ================= HEALTH CHECK ================= */
 app.get("/api/health", (_req, res) => res.json({ status: "ok", timestamp: new Date() }));
 
+/* ================= SEED ROUTE (temp) ================= */
+app.use("/api/seed", require("./routes/seed/seedRoute"));
+
 /* ================= SOCKET.IO ================= */
 const server = http.createServer(app);
 
