@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import io from "socket.io-client";
 import axiosInstance from "../../utils/axiosInstance";
-import "./css/EmployeeChat.css";
+import "./css/employeeChat.css";
 
 
 export default function EmployeeChat() {
